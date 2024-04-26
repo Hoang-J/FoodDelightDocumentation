@@ -199,11 +199,20 @@
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
-              200 = Successful/OK <hr>
-              400 = Requested body not permitted <hr>
-              400 = Query Parameters do not meet requirements<hr>
-              400 = ID is not a number <hr>
-              400 = Todo with that ID not found <hr>
+              <h1>/login :</h1>
+              
+              200: Successful/OK
+              400: "Request body is not permitted at this endpoint
+              400: "Query parameters do not meet the requirements"
+              <h1>/menu:</h1>
+              
+              200: Successful/OK
+              400: "Request body is not permitted at this endpoint"
+              400: "Query parameters do not meet the requirements"
+              400: "ID is not a number"
+              400: That ID does not exist
+              400: There are no food items with that name
+              400: We do not have that category of foods yet
              </div>
           </div>
         </div>
@@ -332,11 +341,14 @@
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
-                200 = Successful/OK <hr>
-                400 = Requested body not permitted <hr>
-                400 = Query Parameters do not meet requirements<hr>
-                400 = ID is not a number <hr>
-                400 = Todo with that ID not found <hr>
+                <h1>/register</h1>
+                
+                200: Successful/OK
+                400: Query not permitted at this endpoint
+                <h1>/order</h1>
+                
+                200: Successful/OK
+                400: Query not permitted at this endpoint
                </div>
             </div>
           </div>
@@ -445,11 +457,18 @@
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
-                200 = Successful/OK <hr>
-                400 = Requested body not permitted <hr>
-                400 = Query Parameters do not meet requirements<hr>
-                400 = ID is not a number <hr>
-                400 = Todo with that ID not found <hr>
+                <h1>/forgotpassword</h1>
+                
+                200: Successful/OK
+                400: Body parameters requirements not met
+                400: Account does not exist
+                <h1>/order</h1>
+                
+                200: Successful/OK
+                400: Body parameters requirements not met
+                400: Query parameters do not meet the requirements
+                400: ID is not a number
+                400: We do not have that order
                </div>
             </div>
           </div>
@@ -557,11 +576,20 @@
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
-                200 = Successful/OK <hr>
-                400 = Requested body not permitted <hr>
-                400 = Query Parameters do not meet requirements<hr>
-                400 = ID is not a number <hr>
-                400 = Todo with that ID not found <hr>
+                <h1>/order/:id</h1>
+                
+                  200: Successful/OK
+                  400: Request body is not permitted at this endpoint
+                  400: Not a valid order ID
+                  400: Query parameters do not meet the requirements
+                  400: That order ID does not exist
+                <h1>/logins/id</h1>
+                
+                  200: Successful/OK
+                  400: Request body is not permitted at this endpoint
+                  400: Not a valid order ID
+                  400: Query parameters do not meet the requirements
+                  400: That order ID does not exist
                </div>
             </div>
           </div>
