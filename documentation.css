@@ -2,12 +2,25 @@ html {
   scroll-behavior: smooth;
 }
 
+h2, h3 {
+  color: #004AAD ;
+}
+
+.accordion-body > h3 {
+  color: rgb(0, 242, 255);
+}
+
+
 .fullBody{
   background-color: white;
   display: grid  !important;
   background-color: white  !important;
   text-align: center;
   color:#004AAD ;
+}
+
+.fullBody > p {
+  color: black ;
 }
 
 
@@ -17,6 +30,12 @@ html {
   text-align: center;
   color: #ffffff;
 
+}
+
+.navbarHeader {
+  color: #004AAD ; 
+  position: absolute;
+  right: 35%;
 }
 
 .navbar-brand{
@@ -36,11 +55,9 @@ div.accordion-body{
   background-color:  blue !important;
 }
 
-div.getresponse{
-  /* background-color: aliceblue !important; */
-}
-
-
+/* div.getresponse{
+  background-color: aliceblue !important;
+} */
 
 
 .getrequest{
@@ -55,8 +72,6 @@ div.getresponse{
   text-align: left;
   color: #004AAD 
 }
-
-
 
 
 .postrequest{

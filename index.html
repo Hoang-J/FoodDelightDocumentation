@@ -15,14 +15,15 @@
     <!-- Navbar  -->
   <nav  class="navbar bg-primary" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand"> FOOD-DELIGHT</a>
+      <!-- <a class="navbar-brand"> FOOD-DELIGHT</a> -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <h2 class="navbarHeader"> Food-Delight Documentation </h2>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="https://food-delight-test.vercel.app/">Home</a>
           </li>
           <li class="nav-item">
             <!-- <a class="nav-link" href="#">Documentation Page</a>
@@ -40,8 +41,7 @@
 
         
           <!-- <div class="header"></div> -->
-          <h2> DOCUMENTATION </h3>
-        <h4> FOOD-DELIGHT </h4>
+        
         <p> This server provides GET, POST, PATCH, AND DELETE Requests and Responses for FOOD-DELIGHT</p>
       
        </div> 
@@ -50,6 +50,7 @@
          <div class ="getting started">
           <h2> Welcome </h2>
           <p> Welcome to Food Delight. You can use the GET, POST, PATCH, & DELETE requests for our seafood restaurant. </p>
+          <hr>
          <h3> Getting Started </h3>
           <p><h3> This is where the fun starts! The documentation is organized as follows:</p></h4>
              <ul>
@@ -68,7 +69,7 @@
                 </li>
 
             </ul>
-
+            <hr>
             <h3> Documentation</h3>
             <p> <h3> API Endpoints  </h3>
               <p> Our endpoints provide the appropriate GET, POST, PATCH & DELETE requests and responses for the many route parameters of our restaurant's API. </p>
@@ -97,7 +98,7 @@
     
     <!-- GET Request Section -->
         <h3><p> Endpoints</p></h3>
-        <hr>
+        
 
       <button type="button" class="btn btn-outline-info">GET</button>   
       
@@ -109,7 +110,7 @@
                   GET '/login'
               </h2>
               <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body"> User can get a list of the menu items or use the specific query parameters to get certain food items
+                <div class="accordion-body"> User can get information based on a single username
                 </button></div>
               </div>
             </div>
@@ -120,11 +121,14 @@
                 </button>
               </h2>
               <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body"> <ul> 
-                  <li>  User can get information based on a single username</li>
-                  </div>
-                </ul>
+                <div class="accordion-body"> 
+                  <ul>
+                    <li>username[string](required): the username the customer is searching for</li>
+                    <li>password[string](required): the password for the account</li>
+                    <li>remember me[checkbox]: don't really have a purpose...yet, it was just in the html code</li>
+                  </ul>
                 </div>
+              </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
@@ -199,20 +203,22 @@
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
-              <h1>/login :</h1>
-              
-              200: Successful/OK
-              400: "Request body is not permitted at this endpoint
-              400: "Query parameters do not meet the requirements"
-              <h1>/menu:</h1>
-              
-              200: Successful/OK
-              400: "Request body is not permitted at this endpoint"
-              400: "Query parameters do not meet the requirements"
-              400: "ID is not a number"
-              400: That ID does not exist
-              400: There are no food items with that name
-              400: We do not have that category of foods yet
+              <h3>/login :</h3>
+              <ul>
+                <li>200: Successful/OK</li>
+                <li>400: "Request body is not permitted at this endpoint</li>
+                <li>400: "Query parameters do not meet the requirements"</li>
+              </ul>
+              <h3>/menu:</h3>
+              <ul>
+                <li>200: Successful/OK</li>
+                <li>400: "Request body is not permitted at this endpoint"</li>
+                <li>400: "Query parameters do not meet the requirements"</li>
+                <li>400: "ID is not a number"</li>
+                <li>400: That ID does not exist</li>
+                <li>400: There are no food items with that name</li>
+                <li>400: We do not have that category of foods yet</li>
+              </ul>
              </div>
           </div>
         </div>
@@ -341,21 +347,20 @@
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
-                <h1>/register</h1>
-                
-                200: Successful/OK
-                400: Query not permitted at this endpoint
-                <h1>/order</h1>
-                
-                200: Successful/OK
-                400: Query not permitted at this endpoint
+                <h3>/register</h3>
+                <ul>
+                  <li>200: Successful/OK</li>
+                  <li>400: Query not permitted at this endpoint</li>
+                </ul>
+                <h3>/order</h3>
+                <ul>
+                  <li>200: Successful/OK</li>
+                  <li>400: Query not permitted at this endpoint</li>
+                </ul>
                </div>
             </div>
           </div>
-        
-  
       </div>
-  
     </div>
     <br>
     <hr>
@@ -457,18 +462,20 @@
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
-                <h1>/forgotpassword</h1>
-                
-                200: Successful/OK
-                400: Body parameters requirements not met
-                400: Account does not exist
-                <h1>/order</h1>
-                
-                200: Successful/OK
-                400: Body parameters requirements not met
-                400: Query parameters do not meet the requirements
-                400: ID is not a number
-                400: We do not have that order
+                <h3>/forgotpassword</h3>
+                <ul>
+                  <li>200: Successful/OK</li>
+                  <li>400: Body parameters requirements not met</li>
+                  <li>400: Account does not exist</li>
+                </ul>
+                <h3>/order</h3>
+                <ul>
+                  <li>200: Successful/OK</li>
+                  <li>400: Body parameters requirements not met</li>
+                  <li>400: Query parameters do not meet the requirements</li>
+                  <li>400: ID is not a number</li>
+                  <li>400: We do not have that order</li>
+                </ul>
                </div>
             </div>
           </div>
@@ -576,20 +583,22 @@
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
-                <h1>/order/:id</h1>
-                
-                  200: Successful/OK
-                  400: Request body is not permitted at this endpoint
-                  400: Not a valid order ID
-                  400: Query parameters do not meet the requirements
-                  400: That order ID does not exist
-                <h1>/logins/id</h1>
-                
-                  200: Successful/OK
-                  400: Request body is not permitted at this endpoint
-                  400: Not a valid order ID
-                  400: Query parameters do not meet the requirements
-                  400: That order ID does not exist
+                <h3>/order/:id</h3>
+                <ul>
+                  <li>200: Successful/OK</li>
+                  <li>400: Request body is not permitted at this endpoint</li>
+                  <li>400: Not a valid order ID</li>
+                  <li>400: Query parameters do not meet the requirements</li>
+                  <li>400: That order ID does not exist</li>
+                </ul>
+                <h3>/logins/id</h3>
+                <ul>
+                  <li>200: Successful/OK</li>
+                  <li>400: Request body is not permitted at this endpoint</li>
+                  <li>400: Not a valid order ID</li>
+                  <li>400: Query parameters do not meet the requirements</li>
+                  <li>400: That order ID does not exist</li>
+                </ul>
                </div>
             </div>
           </div>
